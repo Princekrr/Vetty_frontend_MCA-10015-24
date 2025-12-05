@@ -1,9 +1,11 @@
-import { Injectable, signal } from '@angular/core';
+import { Injectable, signal, inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({
     providedIn: 'root'
 })
 export class AuthService {
+    private router = inject(Router);
     private readonly VALID_EMAIL = 'admin@test.com';
     private readonly VALID_PASSWORD = 'admin123';
 
@@ -37,9 +39,10 @@ export class AuthService {
     }
 
     /**
-     * Logs out the user by clearing authentication state
+     * Logs out the user by clearing authentication state and navigating to login
      */
     logout(): void {
         this.authenticated.set(false);
+        this.router.navigate(['/login']);
     }
 }

@@ -1,14 +1,29 @@
-import { describe, it, expect, beforeEach } from 'vitest';
+import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { TestBed } from '@angular/core/testing';
+import { Router } from '@angular/router';
 import * as fc from 'fast-check';
 import { AuthService } from './auth.service';
 
 describe('AuthService', () => {
     let service: AuthService;
+    let router: Router;
 
     beforeEach(() => {
-        TestBed.configureTestingModule({});
+        const routerMock = {
+            navigate: () => Promise.resolve(true)
+        };
+
+        TestBed.configureTestingModule({
+            providers: [
+                { provide: Router, useValue: routerMock }
+            ]
+        });
         service = TestBed.inject(AuthService);
+        router = TestBed.inject(Router);
+    });
+
+    afterEach(() => {
+        TestBed.resetTestingModule();
     });
 
     it('should be created', () => {
@@ -29,17 +44,14 @@ describe('AuthService', () => {
                     // Exclude the valid credentials from the test
                     fc.pre(email !== VALID_EMAIL || password !== VALID_PASSWORD);
 
-                    // Create a fresh service instance for each test
-                    const testService = new AuthService();
-
                     // Attempt login with invalid credentials
-                    const result = testService.login(email, password);
+                    const result = service.login(email, password);
 
                     // Verify login returns false
                     expect(result).toBe(false);
 
                     // Verify authenticated state is not set to true
-                    expect(testService.isAuthenticated()).toBe(false);
+                    expect(service.isAuthenticated()).toBe(false);
                 }
             ),
             { numRuns: 100 }

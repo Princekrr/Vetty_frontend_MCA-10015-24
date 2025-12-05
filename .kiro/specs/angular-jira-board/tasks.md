@@ -284,15 +284,22 @@
   - Test modal opening
   - _Requirements: 2.1, 2.2, 4.3_
 
-- [ ] 10. Add Route Guards and Navigation
-- [ ] 10.1 Create AuthGuard
+- [x] 10. Add Route Guards and Navigation
+
+
+
+
+- [x] 10.1 Create AuthGuard
+
   - Implement canActivate guard
   - Check authentication state from AuthService
   - Redirect to /login if not authenticated
   - Apply guard to /board route
   - _Requirements: 8.2_
 
-- [ ] 10.2 Implement logout functionality
+- [x] 10.2 Implement logout functionality
+
+
   - Add logout method to AuthService
   - Clear authentication state
   - Navigate to /login
