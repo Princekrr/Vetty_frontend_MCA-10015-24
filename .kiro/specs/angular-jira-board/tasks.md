@@ -7,28 +7,79 @@
   - Ensure project is fully client-side (no backend)
   - _Requirements: 6.1, 6.2, 8.1_
 
-- [ ] 2. Create Data Models and Interfaces
+- [x] 2. Create Data Models and Interfaces
+
+
+
+
+
   - Define Task interface: id, title, description, columnId
   - Define Column interface: id, title, tasks[]
   - Create models file in shared location
   - _Requirements: 2.1, 3.3_
 
-- [ ] 3. Implement AuthService
-- [ ] 3.1 Create AuthService with authentication logic
+
+- [x] 3. Implement AuthService
+
+
+
+- [x] 3.1 Create AuthService with authentication logic
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   - Implement login method that validates dummy credentials (admin@test.com / admin123)
   - Maintain authentication state using signal or BehaviorSubject
   - Provide isAuthenticated() method
   - _Requirements: 1.2, 1.3, 1.5_
 
-- [ ]* 3.2 Write property test for invalid credentials
+
+
+- [ ] 3.2 Write property test for invalid credentials
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   - **Property 1: Invalid credentials are rejected**
   - **Validates: Requirements 1.3**
   - Generate random email/password combinations (excluding valid credentials)
+
   - Verify all return false from login method
   - Configure to run minimum 100 iterations
 
+
+
+
+
+
 - [ ] 4. Implement Login Page
+
 - [ ] 4.1 Build LoginComponent with form and validation
+
   - Import ReactiveFormsModule or FormsModule
   - Add form fields: Email and Password with validation
   - Inject AuthService and Router
