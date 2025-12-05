@@ -1,0 +1,62 @@
+<div class="modal-overlay" *ngIf="isOpen" (click)="onBackdropClick($event)">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <h2>Add New Task</h2>
+        </div>
+
+        <form (ngSubmit)="onSubmit()" #taskForm="ngForm">
+            <div class="modal-body">
+                <!-- Task Title -->
+                <div class="form-group">
+                    <label for="taskTitle">Task Title <span class="required">*</span></label>
+                    <input type="text" id="taskTitle" name="taskTitle" [(ngModel)]="taskTitle" class="form-control"
+                        placeholder="Enter task title" required />
+                    <div class="error-message" *ngIf="showValidationErrors && taskTitle.trim() === ''">
+                        Task title is required
+                    </div>
+                </div>
+
+                <!-- Task ID (Optional) -->
+                <div class="form-group">
+                    <label for="taskId">Task ID <span class="optional">(optional)</span></label>
+                    <input type="text" id="taskId" name="taskId" [(ngModel)]="taskId" class="form-control"
+                        placeholder="Leave empty to auto-generate" />
+                </div>
+
+                <!-- Task Description -->
+                <div class="form-group">
+                    <label for="taskDescription">Description <span class="required">*</span></label>
+                    <textarea id="taskDescription" name="taskDescription" [(ngModel)]="taskDescription"
+                        class="form-control" rows="4" placeholder="Enter task description" required></textarea>
+                    <div class="error-message" *ngIf="showValidationErrors && taskDescription.trim() === ''">
+                        Task description is required
+                    </div>
+                </div>
+
+                <!-- Column Selector -->
+                <div class="form-group">
+                    <label for="targetColumn">Target Column <span class="required">*</span></label>
+                    <select id="targetColumn" name="targetColumn" [(ngModel)]="targetColumnId" class="form-control"
+                        required>
+                        <option value="">Select a column</option>
+                        <option *ngFor="let column of columns" [value]="column.id">
+                            {{ column.title }}
+                        </option>
+                    </select>
+                    <div class="error-message" *ngIf="showValidationErrors && targetColumnId === ''">
+                        Please select a target column
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-cancel" (click)="onCancel()">
+                    Cancel
+                </button>
+                <button type="submit" class="btn btn-submit">
+                    Add Task
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

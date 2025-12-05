@@ -216,10 +216,13 @@
   - Add empty state indicator
   - _Requirements: 7.2, 7.4_
 
-- [-] 8. Create AddTaskModalComponent
+- [x] 8. Create AddTaskModalComponent
 
 
-- [ ] 8.1 Implement AddTaskModalComponent
+
+- [x] 8.1 Implement AddTaskModalComponent
+
+
   - Create modal dialog structure
   - Add form inputs: Task Title, Task ID (optional), Description, Column selector
   - Implement form validation for required fields
@@ -228,7 +231,9 @@
   - Inject TaskService to create task
   - _Requirements: 3.1, 3.2, 3.3, 3.4, 3.5_
 
-- [ ] 8.2 Style AddTaskModalComponent
+- [x] 8.2 Style AddTaskModalComponent
+
+
   - Create modal overlay and dialog
   - Style form inputs
   - Add submit and cancel buttons
