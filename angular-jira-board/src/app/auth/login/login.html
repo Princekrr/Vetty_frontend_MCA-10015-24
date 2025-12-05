@@ -1,13 +1,12 @@
 <div class="login-container">
     <div class="login-card">
-        <h1>Login</h1>
+        <h1>Log in</h1>
 
         <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
             <!-- Email Field -->
             <div class="form-group">
-                <label for="email">Email</label>
                 <input type="email" id="email" formControlName="email" class="form-control"
-                    [class.error]="email?.invalid && email?.touched" placeholder="Enter your email" />
+                    [class.error]="email?.invalid && email?.touched" placeholder="Username" />
                 <div class="error-message" *ngIf="email?.invalid && email?.touched">
                     <span *ngIf="email?.errors?.['required']">Email is required</span>
                     <span *ngIf="email?.errors?.['email']">Please enter a valid email</span>
@@ -16,9 +15,8 @@
 
             <!-- Password Field -->
             <div class="form-group">
-                <label for="password">Password</label>
                 <input type="password" id="password" formControlName="password" class="form-control"
-                    [class.error]="password?.invalid && password?.touched" placeholder="Enter your password" />
+                    [class.error]="password?.invalid && password?.touched" placeholder="Password" />
                 <div class="error-message" *ngIf="password?.invalid && password?.touched">
                     <span *ngIf="password?.errors?.['required']">Password is required</span>
                 </div>
@@ -30,7 +28,10 @@
             </div>
 
             <!-- Submit Button -->
-            <button type="submit" class="btn-login">Login</button>
+            <button type="submit" class="btn-login">Log in</button>
+
+            <!-- Sign up text -->
+            <p class="signup-text">or, sign up</p>
         </form>
     </div>
 </div>

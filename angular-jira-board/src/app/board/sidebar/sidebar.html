@@ -1,0 +1,19 @@
+<div class="sidebar">
+    <div class="sidebar-header">
+        <h2>Design team</h2>
+    </div>
+
+    <nav class="sidebar-nav">
+        <a *ngFor="let item of menuItems" [class.active]="item.active" (click)="onMenuItemClick(item)" class="nav-item">
+            <span class="nav-icon">{{ item.icon }}</span>
+            <span class="nav-label">{{ item.label }}</span>
+        </a>
+    </nav>
+
+    <div class="sidebar-footer">
+        <button class="logout-btn" (click)="onLogout()">
+            <span class="logout-icon">🚪</span>
+            <span>Logout</span>
+        </button>
+    </div>
+</div>

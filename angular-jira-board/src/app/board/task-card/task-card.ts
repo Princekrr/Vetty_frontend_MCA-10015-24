@@ -1,15 +1,14 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DragDropModule } from '@angular/cdk/drag-drop';
 import { Task } from '../../models/task.model';
 
 /**
- * TaskCardComponent displays a single task card with drag-and-drop functionality
+ * TaskCardComponent displays a single task card
  */
 @Component({
     selector: 'app-task-card',
     standalone: true,
-    imports: [CommonModule, DragDropModule],
+    imports: [CommonModule],
     templateUrl: './task-card.html',
     styleUrls: ['./task-card.css']
 })

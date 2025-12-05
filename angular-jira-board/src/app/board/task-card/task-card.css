@@ -1,18 +1,17 @@
 .task-card {
     background: white;
-    border: 1px solid #dfe1e6;
-    border-radius: 4px;
-    padding: 12px;
-    margin-bottom: 8px;
+    border: none;
+    border-radius: 6px;
+    padding: 14px;
+    margin-bottom: 12px;
     cursor: grab;
     transition: all 0.2s ease;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .task-card:hover {
-    background: #f4f5f7;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
 }
 
 .task-card:active {
@@ -21,25 +20,25 @@
 
 .task-id {
     font-size: 11px;
-    color: #5e6c84;
-    font-weight: 600;
-    margin-bottom: 6px;
+    color: #8993a4;
+    font-weight: 500;
+    margin-bottom: 8px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
 }
 
 .task-title {
     font-size: 14px;
     font-weight: 600;
-    color: #172b4d;
+    color: #2c3e50;
     margin-bottom: 6px;
     line-height: 1.4;
     word-wrap: break-word;
 }
 
 .task-description {
-    font-size: 13px;
-    color: #5e6c84;
+    font-size: 12px;
+    color: #6b7280;
     line-height: 1.5;
     word-wrap: break-word;
 }

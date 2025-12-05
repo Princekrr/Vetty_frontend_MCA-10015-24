@@ -1,8 +1,18 @@
-<div class="board-container">
-    <div class="board-columns" cdkDropListGroup>
-        <app-column *ngFor="let column of columns" [column]="column" (addTaskClick)="openAddTaskModal($event)"
-            (taskDropped)="onDrop($event)">
-        </app-column>
+<div class="board-layout">
+    <app-sidebar></app-sidebar>
+
+    <div class="board-main">
+        <div class="board-header">
+            <h1 class="board-title">✨ Jira board (Vetty) ✨</h1>
+        </div>
+
+        <div class="board-container">
+            <div class="board-columns" cdkDropListGroup>
+                <app-column *ngFor="let column of columns" [column]="column" (addTaskClick)="openAddTaskModal($event)"
+                    (taskDropped)="onDrop($event)">
+                </app-column>
+            </div>
+        </div>
     </div>
 </div>
 

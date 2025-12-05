@@ -5,6 +5,7 @@ import { TaskService } from '../task.service';
 import { Column } from '../../models/task.model';
 import { ColumnComponent } from '../column/column';
 import { AddTaskModalComponent } from '../add-task-modal/add-task-modal';
+import { SidebarComponent } from '../sidebar/sidebar';
 
 /**
  * BoardComponent displays the Jira board with drag-and-drop functionality
@@ -12,7 +13,7 @@ import { AddTaskModalComponent } from '../add-task-modal/add-task-modal';
 @Component({
   selector: 'app-board',
   standalone: true,
-  imports: [CommonModule, DragDropModule, ColumnComponent, AddTaskModalComponent],
+  imports: [CommonModule, DragDropModule, ColumnComponent, AddTaskModalComponent, SidebarComponent],
   templateUrl: './board.html',
   styleUrl: './board.css',
 })
