@@ -6,8 +6,9 @@
         </button>
     </div>
 
-    <div class="column-content" cdkDropList [cdkDropListData]="column.tasks" [id]="column.id">
-        <app-task-card *ngFor="let task of column.tasks" [task]="task" cdkDrag></app-task-card>
+    <div class="column-content" cdkDropList [cdkDropListData]="column" [id]="column.id"
+        (cdkDropListDropped)="onDrop($event)">
+        <app-task-card *ngFor="let task of column.tasks" [task]="task" cdkDrag [cdkDragData]="task.id"></app-task-card>
 
         <div *ngIf="column.tasks.length === 0" class="empty-state">
             No tasks yet

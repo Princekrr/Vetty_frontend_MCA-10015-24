@@ -220,6 +220,7 @@
 
 
 
+
 - [x] 8.1 Implement AddTaskModalComponent
 
 
@@ -246,8 +247,14 @@
   - Test modal close on cancel
   - _Requirements: 3.1, 3.2, 3.3, 3.4, 3.5_
 
-- [ ] 9. Implement BoardComponent with Drag-and-Drop
-- [ ] 9.1 Build BoardComponent layout and functionality
+- [x] 9. Implement BoardComponent with Drag-and-Drop
+
+
+
+
+- [x] 9.1 Build BoardComponent layout and functionality
+
+
   - Inject TaskService
   - Load columns from TaskService
   - Display ColumnComponent for each column
@@ -257,7 +264,14 @@
   - Pass selected column to modal
   - _Requirements: 2.1, 2.2, 4.1, 4.2, 4.3, 4.4, 4.5, 4.6_
 
-- [ ] 9.2 Style BoardComponent
+
+
+- [x] 9.2 Style BoardComponent
+
+
+
+
+
   - Create horizontal layout for columns
   - Make layout responsive
   - Add drag-over visual feedback

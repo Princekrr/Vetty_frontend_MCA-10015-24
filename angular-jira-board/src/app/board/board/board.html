@@ -1,1 +1,11 @@
-<p>board works!</p>
+<div class="board-container">
+    <div class="board-columns" cdkDropListGroup>
+        <app-column *ngFor="let column of columns" [column]="column" (addTaskClick)="openAddTaskModal($event)"
+            (taskDropped)="onDrop($event)">
+        </app-column>
+    </div>
+</div>
+
+<app-add-task-modal [isOpen]="isModalOpen" [selectedColumnId]="selectedColumnId" [columns]="columns"
+    (close)="closeModal()">
+</app-add-task-modal>
