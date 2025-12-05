@@ -157,19 +157,25 @@
   - Test LocalStorage save/load
   - _Requirements: 2.1, 3.3, 4.3, 5.1, 5.2_
 
-- [-] 6. Create TaskCardComponent
+- [x] 6. Create TaskCardComponent
 
 
 
 
-- [ ] 6.1 Implement TaskCardComponent
+
+
+
+- [x] 6.1 Implement TaskCardComponent
+
   - Accept task as @Input
   - Display Task ID, Title, and Description
   - Add cdkDrag directive to make card draggable
   - Import DragDropModule
   - _Requirements: 2.3, 4.1_
 
-- [ ] 6.2 Style TaskCardComponent
+
+- [x] 6.2 Style TaskCardComponent
+
   - Create card-style UI with borders and padding
   - Add hover effects
   - Style for readability
@@ -182,7 +188,11 @@
   - Render tasks and verify output contains title, ID, and description
   - Configure to run minimum 100 iterations
 
-- [ ] 7. Create ColumnComponent
+- [-] 7. Create ColumnComponent
+
+
+
+
 - [ ] 7.1 Implement ColumnComponent
   - Accept column as @Input
   - Display column title
