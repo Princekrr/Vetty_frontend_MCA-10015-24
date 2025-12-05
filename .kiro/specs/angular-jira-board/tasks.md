@@ -46,20 +46,7 @@
 
 
 
-- [ ] 3.2 Write property test for invalid credentials
-
-
-
-
-
-
-
-
-
-
-
-
-
+- [x] 3.2 Write property test for invalid credentials
 
 
 
@@ -76,7 +63,9 @@
 
 
 
-- [ ] 4. Implement Login Page
+- [-] 4. Implement Login Page
+
+
 
 - [ ] 4.1 Build LoginComponent with form and validation
 
