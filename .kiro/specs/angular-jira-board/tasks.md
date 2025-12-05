@@ -95,8 +95,14 @@
   - Test error message display
   - _Requirements: 1.1, 1.2, 1.3, 1.4_
 
-- [ ] 5. Implement TaskService
-- [ ] 5.1 Create TaskService with core task management
+- [x] 5. Implement TaskService
+
+
+
+
+- [x] 5.1 Create TaskService with core task management
+
+
   - Initialize 4 fixed columns: To Do, In Progress, Need Review, Completed
   - Implement getColumns() method
   - Implement addTask() method to add new task to selected column
@@ -105,7 +111,9 @@
   - Use signals or BehaviorSubject for reactive state
   - _Requirements: 2.1, 3.3, 3.6, 4.3_
 
-- [ ] 5.2 Add LocalStorage persistence to TaskService
+- [x] 5.2 Add LocalStorage persistence to TaskService
+
+
   - Implement saveToLocalStorage() method
   - Implement loadFromLocalStorage() method
   - Call save after addTask() and moveTask()
@@ -149,7 +157,11 @@
   - Test LocalStorage save/load
   - _Requirements: 2.1, 3.3, 4.3, 5.1, 5.2_
 
-- [ ] 6. Create TaskCardComponent
+- [-] 6. Create TaskCardComponent
+
+
+
+
 - [ ] 6.1 Implement TaskCardComponent
   - Accept task as @Input
   - Display Task ID, Title, and Description
