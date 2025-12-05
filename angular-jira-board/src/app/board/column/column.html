@@ -1,0 +1,16 @@
+<div class="column">
+    <div class="column-header">
+        <h2 class="column-title">{{ column.title }}</h2>
+        <button class="add-task-button" (click)="onAddTaskClick()" aria-label="Add task to {{ column.title }}">
+            +
+        </button>
+    </div>
+
+    <div class="column-content" cdkDropList [cdkDropListData]="column.tasks" [id]="column.id">
+        <app-task-card *ngFor="let task of column.tasks" [task]="task" cdkDrag></app-task-card>
+
+        <div *ngIf="column.tasks.length === 0" class="empty-state">
+            No tasks yet
+        </div>
+    </div>
+</div>

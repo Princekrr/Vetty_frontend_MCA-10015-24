@@ -188,12 +188,16 @@
   - Render tasks and verify output contains title, ID, and description
   - Configure to run minimum 100 iterations
 
-- [-] 7. Create ColumnComponent
+- [x] 7. Create ColumnComponent
 
 
 
 
-- [ ] 7.1 Implement ColumnComponent
+
+
+
+- [x] 7.1 Implement ColumnComponent
+
   - Accept column as @Input
   - Display column title
   - Add cdkDropList directive for drop zone
@@ -202,14 +206,19 @@
   - Emit event when "+" is clicked
   - _Requirements: 2.1, 2.4, 3.1_
 
-- [ ] 7.2 Style ColumnComponent
+
+
+- [x] 7.2 Style ColumnComponent
+
   - Create vertical column layout
   - Add visual separation between columns
   - Style "+" button
   - Add empty state indicator
   - _Requirements: 7.2, 7.4_
 
-- [ ] 8. Create AddTaskModalComponent
+- [-] 8. Create AddTaskModalComponent
+
+
 - [ ] 8.1 Implement AddTaskModalComponent
   - Create modal dialog structure
   - Add form inputs: Task Title, Task ID (optional), Description, Column selector

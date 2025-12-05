@@ -1,0 +1,91 @@
+.column {
+    background: #f4f5f7;
+    border-radius: 4px;
+    padding: 12px;
+    min-width: 280px;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    min-height: 200px;
+    margin-right: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.column:last-child {
+    margin-right: 0;
+}
+
+.column-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #dfe1e6;
+}
+
+.column-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #172b4d;
+    margin: 0;
+    flex: 1;
+}
+
+.add-task-button {
+    background: #0052cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.add-task-button:hover {
+    background: #0065ff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05);
+}
+
+.add-task-button:active {
+    transform: scale(0.98);
+}
+
+.column-content {
+    flex: 1;
+    min-height: 100px;
+    padding: 4px;
+}
+
+.empty-state {
+    text-align: center;
+    color: #8993a4;
+    font-size: 14px;
+    padding: 24px 12px;
+    font-style: italic;
+}
+
+/* Drag and drop styling */
+.column-content.cdk-drop-list-dragging .task-card:not(.cdk-drag-placeholder) {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.cdk-drag-placeholder {
+    opacity: 0.4;
+    background: #dfe1e6;
+    border: 2px dashed #8993a4;
+}
+
+.cdk-drop-list-receiving {
+    background: #e6f2ff;
+    border-radius: 4px;
+}
